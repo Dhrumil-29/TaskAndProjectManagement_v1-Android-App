@@ -1,0 +1,740 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_white"
+    android:orientation="vertical"
+    tools:context=".HomeFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="15dp"
+        tools:ignore="UselessParent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:ignore="UselessParent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/titleBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="15dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/appLogo"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@mipmap/ic_launcher_foreground"
+                    tools:ignore="ContentDescription,MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/appName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@+id/appLogo"
+                    android:fontFamily="@font/lexend_deca"
+                    android:paddingHorizontal="10dp"
+                    android:text="Taska"
+                    android:textColor="@color/black"
+                    android:textSize="25sp"
+                    android:textStyle="bold"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/appLogo"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="RtlHardcoded,UnknownId" />
+
+                <ImageButton
+                    android:id="@+id/notification"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:background="@color/light_white"
+                    android:paddingHorizontal="10dp"
+                    android:src="@drawable/notification_icon"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:background="@color/light_white"
+                    android:paddingHorizontal="5dp"
+                    android:src="@drawable/search_icon"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/notification"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/search"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="10dp"
+                android:background="@android:color/transparent"
+                android:orientation="horizontal"
+                tools:ignore="ObsoleteLayoutParam">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/lexend_deca"
+                    android:gravity="left"
+                    android:text="Recent Project"
+                    android:textColor="@color/black"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText,RtlHardcoded" />
+
+                <TextView
+                    android:id="@+id/RecentProjectSeeAll"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/lexend_deca"
+                    android:gravity="right"
+                    android:text="See All"
+                    android:textColor="@color/light_blue"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText,RtlHardcoded" />
+
+            </LinearLayout>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    tools:ignore="ScrollViewSize,UselessLeaf">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/project1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="10dp"
+                        android:elevation="20sp"
+                        app:cardCornerRadius="20dp"
+                        tools:ignore="UnusedAttribute">
+
+                        <LinearLayout
+                            android:layout_width="270dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="80dp"
+                                android:background="@drawable/project_background1"
+                                android:visibility="visible"
+                                tools:ignore="ContentDescription" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:paddingLeft="10dp"
+                                android:paddingTop="10dp"
+                                tools:ignore="InefficientWeight,RtlHardcoded,RtlSymmetry">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/lexend_deca"
+                                    android:gravity="left"
+                                    android:text="Tiki Mobile App Project"
+                                    android:textColor="@color/black"
+                                    android:textSize="15sp"
+                                    android:textStyle="bold"
+                                    tools:ignore="HardcodedText,TooDeepLayout" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/lexend_deca"
+                                    android:gravity="left"
+                                    android:paddingTop="5dp"
+                                    android:text="UI Kit Design Project - Dec 20,2024"
+                                    android:textColor="@color/light_black"
+                                    android:textSize="12sp"
+                                    tools:ignore="HardcodedText" />
+
+                                <TextView
+                                    android:layout_width="100dp"
+                                    android:layout_height="30dp"
+                                    android:layout_marginVertical="10dp"
+                                    android:background="@drawable/gradient_blue"
+                                    android:fontFamily="@font/lexend_deca"
+                                    android:gravity="center"
+                                    android:text="80 / 90"
+                                    android:textColor="@color/white"
+                                    android:textSize="15sp"
+                                    tools:ignore="HardcodedText,RtlHardcoded" />
+
+                                <ProgressBar
+                                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginRight="15dp"
+                                    android:paddingLeft="5dp"
+                                    android:paddingRight="15dp"
+                                    android:progress="80"
+                                    android:progressTint="@color/lightdim_blue"
+                                    tools:ignore="UnusedAttribute" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="10dp"
+                        android:elevation="20sp"
+                        app:cardCornerRadius="20dp"
+                        tools:ignore="UnusedAttribute">
+
+                        <LinearLayout
+                            android:layout_width="270dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="80dp"
+                                android:background="@drawable/gradient"
+                                android:visibility="visible"
+                                tools:ignore="ContentDescription" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:paddingLeft="10dp"
+                                android:paddingTop="10dp"
+                                tools:ignore="InefficientWeight,RtlHardcoded,RtlSymmetry">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/lexend_deca"
+                                    android:gravity="left"
+                                    android:text="Tiki Mobile App Project"
+                                    android:textColor="@color/black"
+                                    android:textSize="15sp"
+                                    android:textStyle="bold"
+                                    tools:ignore="HardcodedText,TooDeepLayout" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/lexend_deca"
+                                    android:gravity="left"
+                                    android:paddingTop="5dp"
+                                    android:text="UI Kit Design Project - Dec 20,2024"
+                                    android:textColor="@color/light_black"
+                                    android:textSize="12sp"
+                                    tools:ignore="HardcodedText" />
+
+                                <TextView
+                                    android:layout_width="100dp"
+                                    android:layout_height="30dp"
+                                    android:layout_marginVertical="10dp"
+                                    android:background="@drawable/gradient_blue"
+                                    android:fontFamily="@font/lexend_deca"
+                                    android:gravity="center"
+                                    android:text="80 / 90"
+                                    android:textColor="@color/white"
+                                    android:textSize="15sp"
+                                    tools:ignore="HardcodedText,RtlHardcoded" />
+
+                                <ProgressBar
+                                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginRight="15dp"
+                                    android:paddingLeft="5dp"
+                                    android:paddingRight="15dp"
+                                    android:progress="80"
+                                    android:progressTint="@color/lightdim_blue"
+                                    tools:ignore="UnusedAttribute" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="10dp"
+                        android:elevation="20sp"
+                        app:cardCornerRadius="20dp"
+                        tools:ignore="UnusedAttribute">
+
+                        <LinearLayout
+                            android:layout_width="270dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="80dp"
+                                android:background="@drawable/gradient"
+                                android:visibility="visible"
+                                tools:ignore="ContentDescription" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:paddingLeft="10dp"
+                                android:paddingTop="10dp"
+                                tools:ignore="InefficientWeight,RtlHardcoded,RtlSymmetry">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/lexend_deca"
+                                    android:gravity="left"
+                                    android:text="Tiki Mobile App Project"
+                                    android:textColor="@color/black"
+                                    android:textSize="15sp"
+                                    android:textStyle="bold"
+                                    tools:ignore="HardcodedText,TooDeepLayout" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/lexend_deca"
+                                    android:gravity="left"
+                                    android:paddingTop="5dp"
+                                    android:text="UI Kit Design Project - Dec 20,2024"
+                                    android:textColor="@color/light_black"
+                                    android:textSize="12sp"
+                                    tools:ignore="HardcodedText" />
+
+                                <TextView
+                                    android:layout_width="100dp"
+                                    android:layout_height="30dp"
+                                    android:layout_marginVertical="10dp"
+                                    android:background="@drawable/gradient_blue"
+                                    android:fontFamily="@font/lexend_deca"
+                                    android:gravity="center"
+                                    android:text="80 / 90"
+                                    android:textColor="@color/white"
+                                    android:textSize="15sp"
+                                    tools:ignore="HardcodedText,RtlHardcoded" />
+
+                                <ProgressBar
+                                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginRight="15dp"
+                                    android:paddingLeft="5dp"
+                                    android:paddingRight="15dp"
+                                    android:progress="80"
+                                    android:progressTint="@color/lightdim_blue"
+                                    tools:ignore="UnusedAttribute" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="10dp"
+                android:background="@android:color/transparent"
+                android:orientation="horizontal"
+                android:paddingBottom="15dp"
+                tools:ignore="ObsoleteLayoutParam">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:text="Today Task"
+                    android:textColor="@color/black"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText,RtlHardcoded" />
+
+                <TextView
+                    android:id="@+id/TodayTaskSeeAll"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/lexend_deca"
+                    android:gravity="right"
+                    android:text="See All"
+                    android:textColor="@color/light_blue"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText,RtlHardcoded" />
+            </LinearLayout>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    tools:ignore="ScrollViewSize,UselessLeaf">
+
+                    <!--<androidx.recyclerview.widget.RecyclerView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />-->
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:elevation="20sp"
+                        app:cardCornerRadius="10dp"
+                        tools:ignore="RedundantNamespace,UnusedAttribute">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:padding="10dp">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="left"
+                                android:orientation="vertical"
+                                android:paddingLeft="15dp"
+                                android:paddingTop="5dp"
+                                tools:ignore="RtlHardcoded,RtlSymmetry">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/lexend_deca"
+                                    android:text="Kickoff Meeting Project"
+                                    android:textColor="@color/black"
+                                    android:textSize="15sp"
+                                    android:textStyle="bold"
+                                    tools:ignore="HardcodedText" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/lexend_deca"
+                                    android:paddingTop="5dp"
+                                    android:text="Today - 12:00PM"
+                                    android:textColor="@color/light_black"
+                                    tools:ignore="HardcodedText" />
+                            </LinearLayout>
+
+                            <CheckBox
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="20dp"
+                                android:layout_weight="1"
+                                android:buttonTint="@color/coloPrimary"
+                                android:checked="false"
+                                android:gravity="center"
+                                android:layoutDirection="rtl"
+                                tools:ignore="InefficientWeight,RtlHardcoded,UnusedAttribute" />
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:elevation="20sp"
+                        app:cardCornerRadius="10dp"
+                        tools:ignore="RedundantNamespace,UnusedAttribute">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:padding="10dp">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="left"
+                                android:orientation="vertical"
+                                android:paddingLeft="15dp"
+                                android:paddingTop="5dp"
+                                tools:ignore="RtlHardcoded,RtlSymmetry">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/lexend_deca"
+                                    android:text="Kickoff Meeting Project"
+                                    android:textColor="@color/black"
+                                    android:textSize="15sp"
+                                    android:textStyle="bold"
+                                    tools:ignore="HardcodedText" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/lexend_deca"
+                                    android:paddingTop="5dp"
+                                    android:text="Today - 12:00PM"
+                                    android:textColor="@color/light_black"
+                                    tools:ignore="HardcodedText" />
+                            </LinearLayout>
+
+                            <CheckBox
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="20dp"
+                                android:layout_weight="1"
+                                android:buttonTint="@color/coloPrimary"
+                                android:checked="false"
+                                android:gravity="center"
+                                android:layoutDirection="rtl"
+                                tools:ignore="InefficientWeight,RtlHardcoded,UnusedAttribute" />
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:elevation="20sp"
+                        app:cardCornerRadius="10dp"
+                        tools:ignore="RedundantNamespace">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:padding="10dp">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="left"
+                                android:orientation="vertical"
+                                android:paddingLeft="15dp"
+                                android:paddingTop="5dp"
+                                tools:ignore="RtlHardcoded,RtlSymmetry">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/lexend_deca"
+                                    android:text="Kickoff Meeting Project"
+                                    android:textColor="@color/black"
+                                    android:textSize="15sp"
+                                    android:textStyle="bold"
+                                    tools:ignore="HardcodedText" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/lexend_deca"
+                                    android:paddingTop="5dp"
+                                    android:text="Today - 12:00PM"
+                                    android:textColor="@color/light_black"
+                                    tools:ignore="HardcodedText" />
+                            </LinearLayout>
+
+                            <CheckBox
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="20dp"
+                                android:layout_weight="1"
+                                android:buttonTint="@color/coloPrimary"
+                                android:checked="false"
+                                android:gravity="center"
+                                android:layoutDirection="rtl"
+                                tools:ignore="InefficientWeight,RtlHardcoded,UnusedAttribute" />
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:elevation="20sp"
+                        app:cardCornerRadius="10dp"
+                        tools:ignore="RedundantNamespace,UnusedAttribute">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:padding="10dp">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="left"
+                                android:orientation="vertical"
+                                android:paddingLeft="15dp"
+                                android:paddingTop="5dp"
+                                tools:ignore="RtlHardcoded,RtlSymmetry">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/lexend_deca"
+                                    android:text="Kickoff Meeting Project"
+                                    android:textColor="@color/black"
+                                    android:textSize="15sp"
+                                    android:textStyle="bold"
+                                    tools:ignore="HardcodedText" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/lexend_deca"
+                                    android:paddingTop="5dp"
+                                    android:text="Today - 12:00PM"
+                                    android:textColor="@color/light_black"
+                                    tools:ignore="HardcodedText" />
+                            </LinearLayout>
+
+                            <CheckBox
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="20dp"
+                                android:layout_weight="1"
+                                android:buttonTint="@color/coloPrimary"
+                                android:checked="false"
+                                android:gravity="center"
+                                android:layoutDirection="rtl"
+                                tools:ignore="InefficientWeight,RtlHardcoded,UnusedAttribute" />
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:elevation="20sp"
+                        app:cardCornerRadius="10dp"
+                        tools:ignore="RedundantNamespace,UnusedAttribute">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:padding="10dp">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="left"
+                                android:orientation="vertical"
+                                android:paddingLeft="15dp"
+                                android:paddingTop="5dp"
+                                tools:ignore="RtlHardcoded,RtlSymmetry">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/lexend_deca"
+                                    android:text="Kickoff Meeting Project"
+                                    android:textColor="@color/black"
+                                    android:textSize="15sp"
+                                    android:textStyle="bold"
+                                    tools:ignore="HardcodedText" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/lexend_deca"
+                                    android:paddingTop="5dp"
+                                    android:text="Today - 12:00PM"
+                                    android:textColor="@color/light_black"
+                                    tools:ignore="HardcodedText" />
+                            </LinearLayout>
+
+                            <CheckBox
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="20dp"
+                                android:layout_weight="1"
+                                android:buttonTint="@color/coloPrimary"
+                                android:checked="false"
+                                android:gravity="center"
+                                android:layoutDirection="rtl"
+                                tools:ignore="InefficientWeight,RtlHardcoded,UnusedAttribute" />
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+
+                </LinearLayout>
+            </ScrollView>
+
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>
+
